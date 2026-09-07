@@ -1,7 +1,6 @@
 import "./ProductCard.css";
 import { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
-import { removeFromCart } from "../context/CartContext";
 
 export const ProductCard = ({ product }) => {
   const { addToCart, cartList, removeFromCart } = useCart();
