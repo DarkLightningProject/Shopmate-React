@@ -2,6 +2,8 @@
 
 SoundSphere is a responsive single-page shopping cart application for browsing and purchasing headphones. It presents a curated headphone catalogue, lets visitors add or remove items from their cart, and keeps the cart count and total price up to date.
 
+**Live demo:** [soundspehere.netlify.app](https://soundspehere.netlify.app/)
+
 ## Features
 
 - Browse six headphone products with images and prices.
