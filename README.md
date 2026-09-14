@@ -1,87 +1,70 @@
-# SoundSphere Headphone Store
+# Getting Started with Create React App
 
-SoundSphere is a responsive single-page shopping cart application for browsing and purchasing headphones. It presents a curated headphone catalogue, lets visitors add or remove items from their cart, and keeps the cart count and total price up to date.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**Live demo:** [soundspehere.netlify.app](https://soundspehere.netlify.app/)
+## Available Scripts
 
-## Features
+In the project directory, you can run:
 
-- Browse six headphone products with images and prices.
-- Add products to the shopping cart.
-- Remove products from the shopping cart.
-- See the current cart item count and total price.
-- Navigate between the Home and Cart pages without a full page reload.
-- Page titles update for each route.
+### `npm start`
 
-## Technology used
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-| Technology | Purpose |
-| --- | --- |
-| React 19 | Builds the user interface with reusable components. |
-| React Router 7 | Provides client-side routes for the Home and Cart pages. |
-| React Context and `useReducer` | Manages shared cart state, including items and total price. |
-| CSS | Styles the layout, navigation, product cards, and cart. |
-| Create React App / React Scripts | Runs the development server and creates production builds. |
-| npm | Installs and runs project dependencies and scripts. |
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Prerequisites
+### `npm test`
 
-Install [Node.js](https://nodejs.org/) 20 or later. npm is included with Node.js.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Run locally
+### `npm run build`
 
-1. Clone or download this repository.
-2. Open a terminal in the project directory.
-3. Install the dependencies:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-   ```bash
-   npm install
-   ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-4. Start the development server:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-   ```bash
-   npm start
-   ```
+### `npm run eject`
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser. The app reloads automatically when you save a change.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Available commands
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-| Command | Description |
-| --- | --- |
-| `npm start` | Starts the app in development mode at `http://localhost:3000`. |
-| `npm run build` | Creates an optimized production build in the `build` directory. |
-| `npm test` | Starts the test runner in watch mode. |
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Project structure
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```text
-src/
-|- components/        Reusable Header, ProductCard, and CartCard components
-|- context/           Cart context and cart actions
-|- hooks/             Custom page-title hook
-|- pages/             Home catalogue and Cart page
-|- reducer/           Cart state reducer
-|- routes/            Application route definitions
-|- assets/            App logo and visual assets
-|- App.js             Root application layout
-`- index.js           React, router, and cart-provider setup
+## Learn More
 
-public/
-`- assets/images/     Headphone product images
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Cart state
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-`CartProvider` wraps the application and exposes the cart list, total price, and add/remove actions to components. The reducer updates the cart list after each action, while the total is recalculated from the products currently in the cart.
+### Code Splitting
 
-## Production build
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Before deployment, run:
+### Analyzing the Bundle Size
 
-```bash
-npm run build
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Deploy the generated `build` folder to any static hosting provider.
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,18 +1,17 @@
+import { useTitle } from "../hooks/useTitle";
 import { CartCard } from "../components";
-import { useCart } from "../context/CartContext";
-import useTitle from "../hooks/useTitle";
+import { useSelector } from "react-redux";
 
 export const Cart = () => {
-  const { total, cartList } = useCart();
-
   useTitle("Cart");
-  console.log("cartList", cartList);
+  const cartList = useSelector((state) => state.cart.cartItems);
+  const total = useSelector((state) => state.cart.total);
 
   return (
     <main>
       <section className="cart">
         <h1>
-          Cart Items:{cartList.length}/${total}{" "}
+          Cart Items: {cartList.length}/${total}
         </h1>
         {cartList.map((product) => (
           <CartCard key={product.id} product={product} />

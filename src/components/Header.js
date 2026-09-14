@@ -1,16 +1,15 @@
+import { Link, NavLink } from "react-router-dom";
+import Logo from "../assets/logo.png";
 import "./Header.css";
-import Logo from "../assets/logo.svg";
-import { Link, NavLink } from "react-router";
-import { useCart } from "../context/CartContext";
+import { useSelector } from "react-redux";
 
 export const Header = () => {
-  const { cartList } = useCart();
-
+  const cartList = useSelector((state) => state.cart.cartItems);
   return (
     <header>
       <Link to="/" className="logo">
-        <img src={Logo} alt="" />
-        <span>SoundSphere</span>
+        <img src={Logo} alt="Shopmate Logo" />
+        <span>Redux Cart</span>
       </Link>
       <nav className="navigation">
         <NavLink to="/" className="link" end>

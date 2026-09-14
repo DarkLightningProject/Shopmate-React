@@ -46,10 +46,10 @@
     background-color: #103f80;
   }
 
-  .productCard .remove{
-    background-color: #FF0000;
+  .productCard button.removeButton{
+    background-color: #dc2626;
   }
 
-  .productCard .remove:hover{
-    background-color: #cc0000;
+  .productCard button.removeButton:hover{
+    background-color: #b91c1c;
   }
