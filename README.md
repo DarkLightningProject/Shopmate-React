@@ -2,7 +2,7 @@
 
 SoundSphere is a responsive single-page shopping cart application for browsing and purchasing headphones. It lets users explore a curated catalogue, add or remove products, and track the cart count and total price.
 
-This branch contains the **Redux implementation** of the application. The original Context/useReducer implementation remains on the `main` branch.
+This branch contains the **Redux implementation** of the application. The original React Context API implementation remains on the `main` branch.
 
 **Live demo:** [animated-centaur-178467.netlify.app](https://animated-centaur-178467.netlify.app/)
 
@@ -93,5 +93,5 @@ The generated `build` directory can be deployed to any static hosting provider, 
 
 ## Branches
 
-- `main` — Context and `useReducer` implementation.
+- `main` — React Context API implementation.
 - `redux` — Redux Toolkit implementation.
