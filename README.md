@@ -85,3 +85,5 @@ npm run build
 ```
 
 Deploy the generated `build` folder to any static hosting provider.
+
+➡️ **Want the Redux version?** [View the Redux branch](https://github.com/DarkLightningProject/Shopmate-React/tree/redux).
