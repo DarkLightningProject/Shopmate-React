@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# SoundSphere Headphone Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SoundSphere is a responsive single-page shopping cart application for browsing and purchasing headphones. It lets users explore a curated catalogue, add or remove products, and track the cart count and total price.
 
-## Available Scripts
+This branch contains the **Redux implementation** of the application. The original Context/useReducer implementation remains on the `main` branch.
 
-In the project directory, you can run:
+**Live demo:** [soundspehere.netlify.app](https://soundspehere.netlify.app/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Browse six headphone products with images and prices.
+- Add products to the shopping cart.
+- Remove products from the shopping cart.
+- View the current cart item count and total price.
+- Navigate between Home and Cart pages without a full page reload.
+- Update page titles for each route.
+- Manage shared cart state with Redux Toolkit.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology
 
-### `npm test`
+| Technology | Purpose |
+| --- | --- |
+| React 18 | Builds the user interface with reusable components. |
+| React Router 6 | Provides client-side routing for the Home and Cart pages. |
+| Redux Toolkit | Defines the cart slice and reducer logic. |
+| React Redux | Provides the Redux store to the React component tree. |
+| CSS | Styles the layout, navigation, product cards, and cart. |
+| Create React App | Runs the development server and creates production builds. |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) 20 or later
+- npm, included with Node.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Run locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone the Redux branch directly:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone --branch redux --single-branch https://github.com/DarkLightningProject/Shopmate-React.git
+cd Shopmate-React
+npm install
+npm start
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000/) in your browser. The development server reloads automatically when files change.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Available commands
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Command | Description |
+| --- | --- |
+| `npm start` | Starts the development server at `http://localhost:3000`. |
+| `npm run build` | Creates an optimized production build in the `build` directory. |
+| `npm test` | Starts the test runner in watch mode. |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```text
+src/
+├── components/        Reusable Header, ProductCard, and CartCard components
+├── hooks/              Custom page-title hook
+├── pages/              Home catalogue and Cart page
+├── routes/             Application route definitions
+├── store/              Redux cart slices and store configuration
+├── assets/             Application assets
+├── App.js              Root application layout
+└── index.js            React, Redux Provider, and router setup
 
-## Learn More
+public/
+└── assets/images/      Headphone product images
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Redux cart state
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Redux store is configured in `src/store/store.js` and provided to the application with React Redux's `Provider` in `src/index.js`.
 
-### Code Splitting
+Cart state and actions are defined in `src/store/cartSlice.js`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `add` adds a product to the cart and updates the total.
+- `remove` removes a product and updates the total.
+- `cartItems` stores the products currently in the cart.
+- `total` stores the current cart total.
 
-### Analyzing the Bundle Size
+## Production build and deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create a production build with:
 
-### Making a Progressive Web App
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The generated `build` directory can be deployed to any static hosting provider, such as Netlify, Vercel, or GitHub Pages.
 
-### Advanced Configuration
+## Branches
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `main` — Context and `useReducer` implementation.
+- `redux` — Redux Toolkit implementation.
