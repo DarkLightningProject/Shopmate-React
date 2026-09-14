@@ -4,7 +4,7 @@ SoundSphere is a responsive single-page shopping cart application for browsing a
 
 This branch contains the **Redux implementation** of the application. The original Context/useReducer implementation remains on the `main` branch.
 
-**Live demo:** [soundspehere.netlify.app](https://soundspehere.netlify.app/)
+**Live demo:** [animated-centaur-178467.netlify.app](https://animated-centaur-178467.netlify.app/)
 
 ## Features
 
